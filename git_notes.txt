@@ -1,0 +1,182 @@
+Welcome to OpenDev Etherpad!
+
+This pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!
+
+OpenDev: https://opendev.org
+Etherpad on Github: https://github.com/ether/etherpad-lite
+
+
+Project1
+$git --version
+
+git config --global user.name "git account username"
+git config --global user.email "git account email"
+
+
+$apt-get install git --- Ubuntu
+$yum install git ----> RHEL
+
+Step 1: Create a working Folder
+1) mkdir myproject
+2) cd myproject
+3) ls -a
+
+4) ~/myproject$git init
+
+5) ls -a
+.git folder will dispaly
+
+
+6)cat > index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+</head>
+<body>
+
+<h1>Welcome to DevOps-Version control</h1>
+<p>.This is first file in Git Repo </p>
+
+</body>
+</html> 
+
+CTR+C
+
+7) $ git status
+--------------------------------- Result will be like this
+git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add ..." to include in what will be committed)
+    index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+    Tracked - files that Git knows about and are added to the repository
+
+    Untracked - files that are in your working directory, but not added to the   repository
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Staged files are files that are ready to be  committed to the repository you are working on
+
+we have created first page (index.html). So we can add it to the Staging Environment:
+    
+    
+8) git add index.html 
+         or
+     git add .
+9)git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached ..." to unstage)
+    new file: index.html
+
+Git Commit
+ready move from stage to commit for our repo.
+
+10) git commit -m "commit message"
+
+
+git commit -a -m "Updated index.html with a new line"
+[master 09f4acd] Updated index.html with a new line
+ 1 file changed, 1 insertion(+)
+
+
+
+11)In Git, a branch is a new/separate version of the main repository.
+
+
+
+Git Branches
+In Git, a branch is a new/separate version of the main repository.
+
+
+git branch << Branchname>> ---it create new Branch
+git branch --- this command dispaly list of branches
+
+    git checkout <<BranchName>> --- To switch to Branch working copy
+
+    '
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+</head>
+<body>
+
+<h1>Welcome to DevOps-Version control</h1>
+<p>.This is first file in Git Repo </p>
+<p>.Gir Branch merge  </p>
+
+</body>
+</html> 
+
+
+git push means you are returning the repository after modifying it.
+
+git push origin branchname
+
+----------------------------------------------------------------------------------------------------------
+
+Day 2
+---------------------------------------------------------------------------------------------------------
+
+git ls-files --- To list of file in staging area
+git log --oneline --graph --decorate --all
+git stas
+Create .gitignore
+To create a .gitignore file, go to the root of your local Git, and create it:
+    We are just going to add two simple rules:
+
+    Ignore any files with the .log extension
+
+    Ignore everything in any directory named temp
+
+Example
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+We are just going to add two simple rules:
+
+    Ignore any files with the .log extension
+
+    Ignore everything in any directory named temp
+
+Example
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+Clone Command
+ clone means you are making a copy of the repository in your system.
+ Syntax --- In repourl dont give token because we have created repository as a public
+ 
+  git clone <<gitrepourlpath>>
+
+ 
+ Tips for Efficient Cloning
+
+    Shallow Clone: If you only need the latest history and not the entire commit history, you can perform a shallow clone using the --depth option. This can speed up the cloning process:
+
+git clone --depth 1 https://github.com/username/repository.git
+
+    Clone Specific Branch: To clone a specific branch, use the -b option followed by the branch name:
+
+git clone -b branch-name https://github.com/username/repository.git
+
+ Fork
