@@ -7,6 +7,9 @@ git checkout / to checkout the branch
 git branch branch name // to add new branch
 git remote add orginname // to connect with remove github
 git push orginname branchname // to push the file to remote 
+git rm --cached filename //remove the file from stagin area
+git rm -f files.txt //remove from both
+git ls-file //to view the file in stagin area
 
 
 
